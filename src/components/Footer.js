@@ -74,7 +74,7 @@ export default function Footer() {
           <p>
             Designed by{" "}
             <a 
-              href="https://wa.me/94701234567" // Placeholder for Pixora Studio WA
+              href="https://wa.me/94768638725" // Placeholder for Pixora Studio WA
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[var(--accent)] hover:underline font-semibold"
