@@ -108,7 +108,7 @@ window.open(whatsappUrl, "_blank");
   return (
     <section className="py-24 px-4 bg-[#F8F7F4]/0 relative z-10 overflow-hidden">
 
-      <div className="w-full max-w-[420px] mx-auto relative z-10">
+      <div className="w-full max-w-[420px] md:max-w-[650px] mx-auto relative z-10">
         
         {/* Title Section */}
         <motion.div

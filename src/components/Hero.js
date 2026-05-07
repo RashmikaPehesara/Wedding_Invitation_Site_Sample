@@ -31,7 +31,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-visible bg-[var(--background)]">
-      {/* Background Image without full mask */}
+      {/* Background Images */}
       <div className="absolute inset-0 z-0">
         <motion.div
           initial={{ scale: 1 }}
@@ -39,13 +39,26 @@ export default function Hero() {
           transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
           className="absolute inset-0 w-full h-full"
         >
-          <Image
-            src={clientData.hero.backgroundImage}
-            alt="Couple Background"
-            fill
-            priority
-            className="object-cover object-center"
-          />
+          {/* Mobile Image */}
+          <div className="block md:hidden relative w-full h-full">
+            <Image
+              src={clientData.hero.heroImages.mobile}
+              alt="Couple Background Mobile"
+              fill
+              priority
+              className="object-cover object-center"
+            />
+          </div>
+          {/* Desktop Image */}
+          <div className="hidden md:block relative w-full h-full">
+            <Image
+              src={clientData.hero.heroImages.desktop}
+              alt="Couple Background Desktop"
+              fill
+              priority
+              className="object-cover object-center"
+            />
+          </div>
         </motion.div>
         
         {/* Gradient only at the bottom 35% to provide text readability without muddying the image */}
@@ -56,6 +69,7 @@ export default function Hero() {
           }}
         />
       </div>
+
 
       {/* Floating Particles for Cinematic Feel (Optional, but keeping it elegant and minimal) */}
       <div className="absolute inset-0 z-[1] pointer-events-none overflow-visible">
@@ -84,13 +98,16 @@ export default function Hero() {
       </div>
 
       {/* Text Container in the gradient zone */}
-      <div className="relative z-20 flex flex-col items-center text-center w-full px-4 pb-0 mt-auto">
+      <div className="relative z-20 flex flex-col items-center text-center w-full px-4 pb-6 md:pb-0 mt-auto md:translate-y-[200px]">
+
+
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
-          <p className="text-xs md:text-sm tracking-[0.2em] uppercase mb-4 text-[var(--text-muted)] font-montserrat font-medium">
+          <p className="text-xs md:text-sm tracking-[0.2em] uppercase mb-4 text-[var(--text-muted)] font-montserrat font-medium">  
             {clientData.hero.welcomeText}
           </p>
         </motion.div>
@@ -163,7 +180,7 @@ export default function Hero() {
         >
           {/* 1. Left (Day) */}
           <div className="flex-1 flex justify-end pr-4 md:pr-6 translate-y-4 md:translate-y-6">
-            <span className="text-[13px] md:text-xs tracking-[0.3em] uppercase text-[#1E2D2B] opacity-60 font-montserrat font-bold">
+            <span className="text-[13px] md:text-sm tracking-[0.3em] uppercase text-[#1E2D2B] opacity-60 font-montserrat font-bold">
               {dayName}
             </span>
           </div>
@@ -179,20 +196,20 @@ translate-y-4 md:translate-y-6
 
 shadow-[0_0_25px_rgba(200,162,76,0.35),0_0_60px_rgba(200,162,76,0.25),0_12px_30px_rgba(0,0,0,0.1)]
 ">
-            <span className="text-[12px] md:text-[10px] text-[#1E2D2B] font-montserrat tracking-widest opacity-70 mt-2.5 font-semibold">
+            <span className="text-[12px] md:text-xs text-[#1E2D2B] font-montserrat tracking-widest opacity-70 mt-2.5 font-semibold">
               {monthShort}
             </span>
             <span className="text-5xl md:text-6xl text-[#C8A24C] font-normal leading-none drop-shadow-[0_0_12px_rgba(200,162,76,0.3)]" style={{ fontFamily: "'Playfair Display', serif" }}>
               {dateNum}
             </span>
-            <span className="text-[12px] md:text-[10px] text-[#1E2D2B] font-montserrat tracking-widest opacity-70 mt-2.5 font-semibold">
+            <span className="text-[12px] md:text-xs text-[#1E2D2B] font-montserrat tracking-widest opacity-70 mt-2.5 font-semibold">
               {year}
             </span>
           </div>
 
           {/* 3. Right (Time) */}
           <div className="flex-1 flex justify-start pl-4 md:pl-6 translate-y-4 md:translate-y-6">
-            <span className="text-[13px] md:text-xs tracking-[0.3em] uppercase text-[#1E2D2B] opacity-60 font-montserrat font-bold whitespace-nowrap">
+            <span className="text-[13px] md:text-sm tracking-[0.3em] uppercase text-[#1E2D2B] opacity-60 font-montserrat font-bold whitespace-nowrap">
               {clientData.weddingTime}
             </span>
           </div>

@@ -105,7 +105,7 @@ export default function Gallery() {
   if (!images || images.length === 0) return null;
 
   return (
-    <section className="py-[80px] bg-[var(--background)] relative z-20">
+    <section className="pt-[80px] md:pt-[120px] pb-[80px] bg-[var(--background)] relative z-20">
       <div className="max-w-5xl mx-auto px-4 flex flex-col items-center relative z-10">
         
         {/* Section Title */}

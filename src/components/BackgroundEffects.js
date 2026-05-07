@@ -33,6 +33,8 @@ export default function BackgroundEffects() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
+  const justAutoStarted = useRef(false);
+
   // 🌸 PETALS
   useEffect(() => {
     const isMobile =
@@ -55,80 +57,55 @@ export default function BackgroundEffects() {
     setPetals(newPetals);
   }, []);
 
-  // 🎵 AUDIO UNLOCK SYSTEM (CRITICAL FOR MOBILE/SAFARI)
+  // 🎵 AUDIO UNLOCK & AUTO-PLAY SYSTEM
   useEffect(() => {
-  const unlockAudio = async () => {
-    const audio = audioRef.current;
-    if (!audio) return;
+    const handleInitialInteraction = async () => {
+      const audio = audioRef.current;
+      if (!audio) return;
 
-    try {
-      audio.muted = true;           // 👈 force allow autoplay
-      await audio.play();           // 👈 play silently
-      audio.pause();
-      audio.currentTime = 0;
-      audio.muted = false;          // 👈 unmute after unlock
-    } catch (err) {
-      console.log("unlock failed", err);
-    }
-
-    window.removeEventListener("click", unlockAudio);
-    window.removeEventListener("touchstart", unlockAudio);
-  };
-
-  window.addEventListener("click", unlockAudio);
-  window.addEventListener("touchstart", unlockAudio);
-
-  return () => {
-    window.removeEventListener("click", unlockAudio);
-    window.removeEventListener("touchstart", unlockAudio);
-  };
-}, []);
-
-useEffect(() => {
-  const autoPlay = async () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    try {
-      audio.muted = false;
-      audio.volume = 1;
-      await audio.play();
-      setIsPlaying(true);
-    } catch (e) {
-      console.log("autoplay blocked");
-    }
-
-    window.removeEventListener("click", autoPlay);
-  };
-
-  window.addEventListener("click", autoPlay);
-}, []);
-
-  // 🎵 NEW TOGGLE LOGIC
-  const toggleMusic = async () => {
-  const audio = audioRef.current;
-  if (!audio) return;
-
-  try {
-    if (audio.paused) {
-      audio.muted = false;     // 👈 IMPORTANT
-      audio.volume = 1;
-
-      const playPromise = audio.play();
-
-      if (playPromise !== undefined) {
-        await playPromise;
+      try {
+        if (audio.paused) {
+          audio.muted = false;
+          audio.volume = 1;
+          await audio.play();
+          setIsPlaying(true);
+        }
+      } catch (err) {
+        console.log("Autoplay blocked:", err);
       }
 
-      setIsPlaying(true);
-    } else {
-      audio.pause();
-      setIsPlaying(false);
+      window.removeEventListener("click", handleInitialInteraction);
+      window.removeEventListener("touchstart", handleInitialInteraction);
+    };
+
+    window.addEventListener("click", handleInitialInteraction);
+    window.addEventListener("touchstart", handleInitialInteraction);
+
+    return () => {
+      window.removeEventListener("click", handleInitialInteraction);
+      window.removeEventListener("touchstart", handleInitialInteraction);
+    };
+  }, []);
+
+  // 🎵 REFINED TOGGLE LOGIC
+  const toggleMusic = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    try {
+      if (audio.paused) {
+        audio.muted = false;
+        audio.volume = 1;
+        await audio.play();
+        setIsPlaying(true);
+      } else {
+        audio.pause();
+        setIsPlaying(false);
+      }
+    } catch (err) {
+      console.log("Toggle failed:", err);
     }
-  } catch (err) {
-    console.log("Audio blocked:", err);
-  }
-};
+  };
 
   return (
     <>

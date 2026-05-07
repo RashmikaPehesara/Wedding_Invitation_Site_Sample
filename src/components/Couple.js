@@ -30,11 +30,13 @@ const PersonCard = ({ person, index }) => {
       <motion.div
         ref={cardRef}
         onClick={() => setIsActive(!isActive)}
+        onMouseEnter={() => { if (window.innerWidth >= 768) setIsActive(true); }}
+        onMouseLeave={() => { if (window.innerWidth >= 768) setIsActive(false); }}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
-        className="relative w-full aspect-[3.2/4] rounded-[30px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] cursor-pointer mb-6" //Change box size
+        className="relative w-full aspect-[3.2/4] rounded-[30px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] cursor-pointer mb-10" // Increased gap below photo
       >
         <Image
           src={person.image}
@@ -111,7 +113,7 @@ export default function Couple() {
   const { groom, bride } = clientData.couple;
 
   return (
-    <section className="py-[80px] px-6 bg-[var(--background)] relative">
+    <section className="pt-20 md:pt-[350px] pb-8 px-6 bg-[var(--background)] relative">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <div className="flex flex-col md:flex-row gap-16 md:gap-24 justify-center items-start w-full">
           <PersonCard person={groom} index={0} />

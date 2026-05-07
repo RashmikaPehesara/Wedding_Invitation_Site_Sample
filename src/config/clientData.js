@@ -39,9 +39,8 @@ export const clientData = {
   hero: {
     heroImages: {
       mobile: "https://images.pexels.com/photos/36813779/pexels-photo-36813779.jpeg",
-      desktop: "https://images.pexels.com/photos/36813779/pexels-photo-36813779.jpeg"
+      desktop: "https://images.pexels.com/photos/36813782/pexels-photo-36813782.jpeg"
     },
-    backgroundImage: "https://images.pexels.com/photos/36813779/pexels-photo-36813779.jpeg", // South Asian Wedding Couple
     welcomeText: "We are getting married",
   },
 

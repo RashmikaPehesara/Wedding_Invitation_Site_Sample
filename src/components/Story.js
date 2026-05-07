@@ -59,7 +59,7 @@ export default function Story() {
   }, []);
 
   return (
-    <section className="py-2 px-4 bg-[var(--background)] relative overflow-hidden">
+    <section className="pt-6 md:pt-12 pb-10 px-4 bg-[var(--background)] relative overflow-hidden">
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
