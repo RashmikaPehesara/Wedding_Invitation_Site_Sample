@@ -124,6 +124,10 @@ export const clientData = {
     showRSVP: true,
     showSocialLinks: true,
     showMusic: true,
+    showLoveStory: true,
+    showCountdown: true,
+    showTimeline: true,
+    showGallery: true,
   },
 
   // Contact Info

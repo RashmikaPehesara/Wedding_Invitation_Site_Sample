@@ -53,6 +53,8 @@ const slideVariants = {
 const isMobileDevice = typeof window !== "undefined" && window.innerWidth < 768;
 
 export default function Gallery() {
+  if (!clientData.toggles.showGallery) return null;
+
   const images = clientData.gallery; // exactly 16 images
   const itemsPerPage = 4;
   const totalPages = Math.ceil(images.length / itemsPerPage);

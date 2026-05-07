@@ -214,6 +214,7 @@ const TimelineItem = ({ item, index }) => {
 };
 
 export default function Timeline() {
+  if (!clientData.toggles.showTimeline) return null;
   return (
     <section className="py-[80px] px-4 bg-[var(--background)] relative overflow-hidden">
       <MandalaDecoration />
