@@ -108,7 +108,7 @@ const MandalaDecoration = () => (
         y: { duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
         rotate: { duration: 120, repeat: Infinity, ease: "linear" }
       }}
-      className="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] md:w-[600px] md:h-[600px] opacity-[0.12] pointer-events-none z-[1] text-[#d6c3a3] blur-[0.5px]"
+      className="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] md:w-[600px] md:h-[600px] opacity-[0.20] pointer-events-none z-[1] text-[#d6c3a3] blur-[0.5px]"
     >
       <FloralMandalaSVG />
     </motion.div>
@@ -134,7 +134,7 @@ const MandalaDecoration = () => (
         y: { duration: 18, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
         rotate: { duration: 80, repeat: Infinity, ease: "linear" }
       }}
-      className="absolute top-[30%] right-[-120px] w-[350px] h-[350px] opacity-[0.1] pointer-events-none z-[1] text-[#d6c3a3] blur-[1px]"
+      className="absolute top-[30%] right-[-120px] w-[350px] h-[350px] opacity-[0.4] pointer-events-none z-[1] text-[#d6c3a3] blur-[1px]"
     >
       <FloralMandalaSVG />
     </motion.div>
@@ -147,7 +147,7 @@ const MandalaDecoration = () => (
         y: { duration: 22, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
         rotate: { duration: 90, repeat: Infinity, ease: "linear" }
       }}
-      className="absolute top-[65%] left-[-100px] w-[280px] h-[280px] opacity-[0.12] pointer-events-none z-[1] text-[#d6c3a3] blur-[0.5px]"
+      className="absolute top-[65%] left-[-100px] w-[280px] h-[280px] opacity-[0.35] pointer-events-none z-[1] text-[#d6c3a3] blur-[0.5px]"
     >
       <FloralMandalaSVG />
     </motion.div>

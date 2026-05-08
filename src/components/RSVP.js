@@ -118,7 +118,7 @@ window.open(whatsappUrl, "_blank");
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl text-[#1E2D2B] mb-5 font-heading">Your Kind Presence Requested</h2>
+          <h2 className="text-4xl md:text-5xl text-[#1E2D2B] mb-5 font-heading">We Would Be Delighted By Your Presence</h2>
           <div className="w-12 h-[2px] bg-[#C8A24C] mx-auto rounded-full mb-5"></div>
           <p className="text-[#1E2D2B]/70 font-montserrat font-medium text-sm tracking-wide">
             Kindly respond by November 15th, 2026
@@ -132,26 +132,8 @@ window.open(whatsappUrl, "_blank");
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="bg-white p-8 md:p-10 rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-[#1E2D2B]/[0.02] relative overflow-hidden"
+          className="bg-white p-8 md:p-10 rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-[#1E2D2B]/[0.02]"
         >
-          {/* Subtle Romantic Decoration */}
-          <div className="absolute top-0 right-0 w-48 h-48 opacity-[0.06] pointer-events-none z-0 translate-x-12 -translate-y-12">
-            <img 
-              src="/images/rsvp_decoration.png" 
-              alt="Decoration" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 w-40 h-40 opacity-[0.04] pointer-events-none z-0 -translate-x-8 translate-y-8 rotate-180">
-            <img 
-              src="/images/rsvp_decoration.png" 
-              alt="Decoration" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-
-          <div className="relative z-10"> {/* Content Wrapper */}
-          
           <AnimatedInput 
             label="Full Name" 
             placeholder="Kasun Silva" 
@@ -308,7 +290,6 @@ window.open(whatsappUrl, "_blank");
             Send via WhatsApp
           </button>
 
-          </div>
         </motion.form>
       </div>
     </section>

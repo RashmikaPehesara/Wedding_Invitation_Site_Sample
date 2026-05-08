@@ -113,7 +113,7 @@ export default function BackgroundEffects() {
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         {/* Top Left */}
         <motion.div 
-          className="absolute -top-[150px] -left-[150px] w-[500px] h-[500px] text-[#C8A24C] opacity-[0.06]"
+          className="absolute -top-[150px] -left-[150px] w-[500px] h-[500px] text-[#C8A24C] opacity-[0.15]"
           animate={{ 
             rotate: [0, 360],
             y: [0, -10, 0], 
@@ -130,7 +130,7 @@ export default function BackgroundEffects() {
         
         {/* Top Right */}
         <motion.div 
-          className="absolute -top-[100px] -right-[100px] w-[450px] h-[450px] text-[#C8A24C] opacity-[0.08]"
+          className="absolute -top-[100px] -right-[100px] w-[450px] h-[450px] text-[#C8A24C] opacity-[0.12]"
           animate={{ 
             rotate: [0, -360],
             y: [0, 12, 0], 
@@ -147,7 +147,7 @@ export default function BackgroundEffects() {
 
         {/* Bottom Left */}
         <motion.div 
-          className="absolute -bottom-[200px] -left-[100px] w-[600px] h-[600px] text-[#C8A24C] opacity-[0.06]"
+          className="absolute -bottom-[200px] -left-[100px] w-[600px] h-[600px] text-[#C8A24C] opacity-[0.12]"
           animate={{ 
             rotate: [0, 360],
             y: [0, -15, 0], 
@@ -164,7 +164,7 @@ export default function BackgroundEffects() {
 
         {/* Bottom Right */}
         <motion.div 
-          className="absolute -bottom-[120px] -right-[120px] w-[400px] h-[400px] text-[#C8A24C] opacity-[0.12]"
+          className="absolute -bottom-[120px] -right-[120px] w-[400px] h-[400px] text-[#C8A24C] opacity-[0.15]"
           animate={{ 
             rotate: [0, -360],
             y: [0, 10, 0], 
