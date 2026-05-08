@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💍 Wedding Invitation Website
 
-## Getting Started
+## 🚀 Live Demo
 
-First, run the development server:
+👉 https://wedding-invitation-site-sample.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 About This Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is a **modern digital wedding invitation website** built using Next.js.
+It is designed to provide couples with a beautiful, elegant, and interactive way to invite guests online instead of using traditional printed invitations.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The website includes wedding details, countdown timer, RSVP system, gallery, event timeline, music, animations, and multilingual support.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* 💍 Elegant and modern wedding invitation design
+* 📱 Fully responsive (mobile-first design)
+* ⚡ Fast performance with Next.js
+* 🌸 Smooth animations and romantic UI effects
+* ⏳ Live wedding countdown timer
+* 🗓️ Event timeline section
+* 📍 Location and Google Maps integration
+* 🖼️ Wedding gallery with image slider
+* 🎵 Background music with mute/unmute control
+* 💌 RSVP form with WhatsApp integration
+* 🌐 Sinhala & English language support
+* 🎨 Easy customization using `clientData.js`
+* 💖 Floating romantic particle effects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Frontend:** Next.js, React, Tailwind CSS
+* **Animations:** Framer Motion
+* **Icons:** React Icons / Lucide Icons
+* **Styling:** Tailwind CSS
+* **Deployment:** Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📲 How It Works
+
+1. Couple shares invitation link with guests
+2. Guests open invitation in browser
+3. They can view wedding details and gallery
+4. Check event time and location
+5. Send RSVP response through WhatsApp
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Vercel**.
+Every push to GitHub automatically triggers a new deployment.
+
+---
+
+## 🔮 Future Improvements
+
+* 🔐 Admin dashboard for editing content
+* 🗄️ Database integration
+* 📸 Upload gallery from dashboard
+* 💌 Email invitation support
+* 🎥 Video background support
+* 🌍 More language support
+* 📅 Google Calendar integration
+
+---
+
+## 👨‍💻 Author
+
+**Rashmika Pehesara**
+
+---
+
+⭐ If you like this project, feel free to star the repository!
